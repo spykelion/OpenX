@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OpenX.App">
+    <!--
+        Define global resources and styles here, that apply to all pages in your app.
+       <Color x:FactoryMethod="FromHex" x:Key="SectionHeaderBackground">
+                <x:Arguments>
+                    <x:String>#03A9F4</x:String>
+                </x:Arguments>
+            </Color>
+            <Color x:FactoryMethod="FromHex" x:Key="SectionHeaderText">
+                <x:Arguments>
+                    <x:String>#fff</x:String>
+                </x:Arguments>
+            </Color>
+            <x:Int32 x:Key="SectionHeaderDimension">20</x:Int32>
+
+            <x:Int32 x:Key="DisclosureImageDim">35</x:Int32>
+
+
+            <Color x:FactoryMethod="FromHex" x:Key="ButtonBackground">
+                <x:Arguments>
+                    <x:String>#03A9F4</x:String>
+                </x:Arguments>
+            </Color>
+            <Color x:FactoryMethod="FromHex" x:Key="ButtonText">
+                <x:Arguments>
+                    <x:String>#fff</x:String>
+                </x:Arguments>
+            </Color>
+    -->
+   
+    <Application.Resources>
+        <ResourceDictionary>
+         
+            <Color x:Key="ColorPrimary">
+                #3cc2ff
+            </Color>
+            <Color x:Key="ColorPrimaryLight">
+                #4fc8ff
+            </Color>
+            <Color x:Key="ColorPrimaryDark">
+                #0565b2
+            </Color>
+            <Color x:Key="ColorAccent">
+                #009fe0
+            </Color>
+            <Color x:Key="ColorPrimaryBackround">
+                #fff
+            </Color>
+            <Color x:Key="ColorText">
+                #7e7d7d
+            </Color>
+            <Color x:Key="ColorTextLight">
+                #d3d3d3
+            </Color>
+
+            <Style x:Key="NormalTextEntry" TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource ColorText}" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+            <Style x:Key="NormalTextDatePicker" TargetType="DatePicker">
+                <Setter Property="TextColor" Value="{StaticResource ColorText}" />
+            </Style>
+            <Style x:Key="NormalTextTimerPicker" TargetType="TimePicker">
+                <Setter Property="TextColor" Value="{StaticResource ColorText}" />
+            </Style>
+            <Style x:Key="NormalTextPicker" TargetType="Picker">
+                <Setter Property="TextColor" Value="{StaticResource ColorText}" />
+            </Style>
+            <Style x:Key="NormalText" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorText}" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+            <Style x:Key="SmallText" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorText}" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+            <Style x:Key="NormalTextLight" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorTextLight}" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+            <Style x:Key="NormalTextWhite" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+            <Style x:Key="NormalTextWhiteBold" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+            <Style x:Key="NormalTextBigger" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorText}" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+            <Style x:Key="NormalTextWhiteBigger" TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+            <Style x:Key="NormalTextBig" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorText}" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+
+            <Style x:Key="ErrorListText" TargetType="Label">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontSize" Value="12" />
+            </Style>
+
+            <Style x:Key="WeekdaySelectedListText" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorAccent}" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+
+            <Style x:Key="WeekdayNotSelectedListText" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorTextLight}" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontSize" Value="18" />
+            </Style>
+
+            <Style x:Key="WeekdaySelectedEditText" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorAccent}" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontSize" Value="36" />
+            </Style>
+
+            <Style x:Key="WeekdayNotSelectedEditText" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource ColorTextLight}" />
+                <Setter Property="FontFamily" Value="Normal" />
+                <Setter Property="FontSize" Value="36" />
+            </Style>
+
+            <Style x:Key="BlueButton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorAccent}" />
+                <Setter Property="BorderRadius" Value="5" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+
+            <Style x:Key="BlueButton2" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource ColorAccent}" />
+                <Setter Property="BorderRadius" Value="5" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="Margin" Value="25,10,25,10" />
+            </Style>
+
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource ColorPrimary}"/>
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

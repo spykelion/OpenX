@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:OpenX.Views"
+       Title="OpenX"
+       x:Class="OpenX.AppShell">
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="{StaticResource ColorPrimary}" Padding="5" ColumnSpacing="-10" Margin="0,0,0,10">
+                <Frame Grid.Column="0" Scale=".6" CornerRadius="100" Grid.Row="0" BackgroundColor="white">
+                    <Image Source="user_without_picture_icon.png" VerticalOptions="Center" HorizontalOptions="Center"/>
+                </Frame>
+                <StackLayout Grid.Column="1"
+                                 Grid.Row="0"
+                                 Spacing="0"
+                                 Margin="0,60,0,0">
+                    <Label Text="Username"
+                               Style="{DynamicResource NormalTextWhiteBigger}"
+                               x:Name="MenuUser" />
+                    <Label Style="{DynamicResource NormalTextWhite}" FontSize="Small" Text="View Account" />
+                </StackLayout>
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <FlyoutItem Title="Devices as Member" Icon="my_devices_icon.png" >
+        <ShellContent Route="ItemsPage"  ContentTemplate="{DataTemplate local:ItemsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Guest Schedules" Icon="guest_icon.png">
+        <ShellContent Route="ItemsPage"  ContentTemplate="{DataTemplate local:ItemsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Panic Setup" Icon="panic_icon.png">
+        <ShellContent Route="ItemsPage"  ContentTemplate="{DataTemplate local:ItemsPage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Messages" Icon="message.png">
+        <ShellContent Route="ItemsPage"  ContentTemplate="{DataTemplate local:ItemsPage}" />
+    </FlyoutItem>
+
+    <Shell.FlyoutFooter>
+        <ContentView BackgroundColor="{DynamicResource ColorPrimaryBackround}" Padding="16,0,0,20">
+            <Label 
+                x:Name="LogOutLink"
+                VerticalOptions="FillAndExpand"
+                VerticalTextAlignment="Center"
+                 HeightRequest="30"
+                Text="Sign Out"
+                Style="{StaticResource NormalText}" />
+        </ContentView>
+    </Shell.FlyoutFooter>
+
+    <!-- Flyout DataItem DataTemplate Definition-->
+    <Shell.ItemTemplate>
+        <DataTemplate>
+            <StackLayout Padding="0, 10" HorizontalOptions="FillAndExpand">
+                <StackLayout Padding="20,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Image Source="{Binding Icon}" HeightRequest="30" WidthRequest="30" Aspect="AspectFill"
+                                       HorizontalOptions="Center" VerticalOptions="Center" />
+                    <StackLayout Padding="18, 0, -4, 0" Orientation="Horizontal"
+                                             HorizontalOptions="FillAndExpand">
+                        <Label VerticalOptions="FillAndExpand"
+                                           VerticalTextAlignment="Center"
+                                           Text="{Binding Title}"
+                                           Style="{StaticResource NormalText}" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </DataTemplate>
+    </Shell.ItemTemplate>
+</Shell>
